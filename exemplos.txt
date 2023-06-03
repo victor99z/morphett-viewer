@@ -1,0 +1,18 @@
+; Questao do par, impar 
+
+0 0 0 r 0
+0 1 1 r 0
+0 _ _ l 1
+
+1 0 0 r 2
+1 1 1 l 3
+
+2 _ 0 * halt-accept
+
+3 1 1 l 3
+3 0 1 r 4
+3 _ 1 r 4
+
+4 1 0 r 4
+4 0 1 r 4
+4 _ _ * halt-accept
