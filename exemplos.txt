@@ -16,3 +16,51 @@
 4 1 0 r 4
 4 0 1 r 4
 4 _ _ * halt-accept
+
+-------------------------------------------------------
+; Questao lista
+; 0n 1k 0m
+; n + k <= m
+
+0 0 X r 0
+0 1 Y r 1
+
+1 1 Y r 1
+1 0 Z r 2
+
+2 0 Z r 2
+2 1 ? * halt
+
+;====================
+
+0 _ _ l 0_e ; não tem uns = tem q ser par
+
+0_e _ _ * halt-accept
+
+0_e x x l 0_e
+0_e X x l 0_e1        ; apaga 1
+
+0_e1 * * l 0_e1       ; vai pro começo
+0_e1 x * r 0_e2       ; ja foi apagado algo, só tem x pra frente
+0_e1 _ _ r 0_e2       ; tenta apagar alguma coisa
+
+0_e2 X x r 0_e3       ; deveria parar direto no X, s/ ter q ir pra direita
+
+0_e3 * * r 0_e3       ; vai pra frente lá e recomeça
+0_e3 _ * l 0_e
+;====================
+
+2 _ * l 3_
+
+3_ Z * l 3_
+3_ a a l 3_
+
+3_ _ * r halt-accept
+
+3_ Y a r remove
+3_ X a r remove
+
+remove * * r remove
+remove _ _ l remove_
+
+remove_ Z _ l 3_

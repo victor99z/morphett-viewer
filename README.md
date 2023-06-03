@@ -1,8 +1,6 @@
 # Morphett viewer project
 
 
----
+### TODO:
 
-# TODO:
-
-[ ] - Testing with multple inputs 
+- Test with multiple inputs
