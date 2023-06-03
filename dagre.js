@@ -12,7 +12,7 @@ g.setEdge("CLOSED",     "LISTEN",     { label: "0,1,l" });
 g.setEdge("LISTEN",     "SYN RCVD",   { label: "rcv SYN" });
 g.setEdge("LISTEN",     "SYN SENT",   { label: "send" });
 g.setEdge("LISTEN",     "CLOSED",     { label: "close" });
-g.setEdge("SYN RCVD",     "",     { label: "close" });
+g.setEdge("SYN RCVD",     "qf",     { label: "(1,0,r)" });
 // g.setEdge("SYN RCVD",   "FINWAIT-1",  { label: "close" });
 
 // Set some general styles

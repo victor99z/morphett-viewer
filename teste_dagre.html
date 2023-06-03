@@ -8,22 +8,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/xcode.min.css"
     />
-    <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-      rel="stylesheet"
-    />
     <!-- MDB -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.css"
       rel="stylesheet"
     />
-    <title>Morphett visualizer</title>
+    <title>Morphett state viewer</title>
   </head>
   <style>
     svg {
@@ -40,11 +30,15 @@
       fill: #333;
       stroke-width: 1.5px;
     }
+    .textarea{
+      font-family: inherit;
+      font-size: inherit;
+    }
   </style>
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-8">
           <div class="d-flex p-2">
             <h1>Morphett viewer</h1>
           </div>
@@ -56,14 +50,26 @@
             <div class="form">
               <textarea
                 class="form-control"
-                id="textAreaExample"
+                id="inputMorphet"
                 rows="10"
                 placeholder="morphett code here"
               ></textarea>
               <br>
-              <button type="submit" class="btn btn-primary btn-block">
-                Draw Graph
-              </button>
+              <div class="col-md-12">
+                <div>
+                  <button type="submit" class="btn btn-secondary btn-block" onclick="drawExample(event)">
+                    Draw example
+                  </button>
+                </div>
+                <div style="margin-top: 5px;">
+                  <button type="reset" class="btn btn-secondary btn-block" style="height: 100%;"> reset</button>
+                </div>
+                <div style="margin-top: 5px; margin-bottom: 5px;">
+                  <button type="submit" class="btn btn-primary btn-block" onclick="parser(event)">
+                    Draw Graph
+                  </button>
+                </div>
+              </div>
             </div>
           </form>
         </div>
@@ -75,12 +81,9 @@
   </body>
 
   <!-- MDB -->
-  <script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"
-  ></script>
+  <script src="parser.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js"></script>
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://dagrejs.github.io/project/dagre-d3/latest/dagre-d3.min.js"></script>
-  <script src="dagre.js"></script>
 </html>
