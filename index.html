@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -58,13 +59,35 @@
                   </button>
                 </div>
                 <div style="margin-top: 5px;">
-                  <button type="reset" class="btn btn-secondary btn-block" style="height: 100%;"> reset</button>
+                  <button type="reset" class="btn btn-secondary btn-block" style="height: 100%;">reset</button>
                 </div>
                 <div style="margin-top: 5px; margin-bottom: 5px;">
                   <button type="submit" class="btn btn-primary btn-block" onclick="parser(event)">
                     Draw Graph
                   </button>
                 </div>
+                <div style="margin-top: 5px; margin-bottom: 5px;">
+                  <input
+                    class="form-control"
+                    id="inputcode"
+                    type="text"
+                    value="1001001"
+                    onclick="drawExample(event)"
+                  />
+                </div>
+                <div style="margin-top: 5px; margin-bottom: 5px;">
+                  <button type="submit" class="btn btn-primary btn-block" onclick="run_machine(event)">
+                    Simulate
+                  </button>
+                </div>
+                <input
+                  class="form-control"
+                  id="drawhere"
+                  type="text"
+                  placeholder="Fita"
+                  aria-label="disabled input example"
+                  disabled
+                />
               </div>
             </div>
           </form>
