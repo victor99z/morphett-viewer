@@ -17,25 +17,25 @@ Ao clickar em Draw Example voce irá ter o exemplo inicial igual do morphett, po
 
 No ultimo campo (disabilitado) temos a simulação da nossa `fita` de trabalho.
 
-![](morphet.webm)
+[morphet.webm](https://github.com/victor99z/morphett-viewer/assets/30540730/19da0147-ed36-4d1c-a628-53e37e711f86)
 
 ### Restrições
 
-- Simbolo inicial precisa ser "0"
+- Simbolo inicial
+ precisa ser "0"
 - Não aceita voltar passos ou avançar, velocidade unica (250ms entre as transições)
 - Só funciona para o modelo fita duplamente infinita.
 - MT para se tiver em  um estado que inicial com "halt", como "halt-reject" ou "halt-accept"
 
 ### TODO:
 
-- [] Testes com varios inputs
+- [ ] Testes com varios inputs
     - Apenas alguns inputs de MT e palavra foram testas. Alguns exemplos estão no arquivo exemplo.txt e outros podem ser encontrados [aqui](https://github.com/awmorp/turing/tree/gh-pages/machines)
 - [x] Implementação de um modelo de mt que rode o código do morphett
 - [x] Modificar as cores do diagram pra melhorar visualizar.
-- [] Altamente urgente modificar o codigo da estrutura para virar uma classe. Organização ficara melhor.
-- [] Colocar opção para aumentar ou diminuir a velocidade da animação. pode ser feito com um slider ou input do tipo number e colocando na variavel `timer` no arquivo parser.js dentro do `setInterval`
-- [] Translate this README.md to english
-
+- [ ] Altamente urgente modificar o codigo da estrutura para virar uma classe. Organização ficara melhor.
+- [ ] Colocar opção para aumentar ou diminuir a velocidade da animação. pode ser feito com um slider ou input do tipo number e colocando na variavel `timer` no arquivo parser.js dentro do `setInterval`
+- [ ] Translate this README.md to english
 
 ### Quer contribuir? :smile:
 
