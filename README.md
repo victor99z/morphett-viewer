@@ -15,13 +15,13 @@ Ao clickar em Draw Example voce irá ter o exemplo inicial igual do morphett, po
 - Botão `DRAW GRAPH` desenha o diagrama de estados
 - Botão `SIMULATE` roda a palavra na MT e vai desenhando conforme passa pelas transições.
 
-No ultimo campo (disabilitado) temos a simulação da nossa `fita` de trabalho.
+No ultimo campo (desabilitado) temos a simulação da nossa `fita` de trabalho.
 
 [morphet.webm](https://github.com/victor99z/morphett-viewer/assets/30540730/19da0147-ed36-4d1c-a628-53e37e711f86)
 
 ### Restrições
 
-- Simbolo inicial
+- Estado inicial
  precisa ser "0"
 - Não aceita voltar passos ou avançar, velocidade unica (250ms entre as transições)
 - Só funciona para o modelo fita duplamente infinita.
